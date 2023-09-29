@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple">#8692f7</color>
+    <color name="lightpurple">#DCD2EA</color>
+    <color name="primary">#01AED8</color>
+    <color name="purple2">#6750A4 </color>
+    <color name="lavender">#8692F7</color>
+    <color name="softblue">#8D9FA6</color>
+    <color name="yellowsoft">#DFD6A1</color>
+    <color name="green"> #54A231</color>
+    <color name="lightgreen"> #D5F0C3</color>
+
+</resources>

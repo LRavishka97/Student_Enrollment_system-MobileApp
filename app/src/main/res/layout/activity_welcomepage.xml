@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcomeimage"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WELCOME TO EDU-WORLD"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_marginTop="1dp"/>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We offer many courses in many subjects, you can choose whatever the stream you like!"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginTop="1dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="280dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnlogin"
+            android:layout_width="230dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="70dp"
+            android:backgroundTint="@color/green"
+            android:text="LOGIN"/>
+
+        <Button
+            android:id="@+id/btnsignup"
+            android:layout_width="230dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@color/lightgreen"
+            android:text="SIGN UP"
+            android:textColor="@color/green"/>
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
