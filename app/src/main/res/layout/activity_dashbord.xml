@@ -1,41 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashbordActivity"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".dashbordActivity"
-        android:orientation="vertical"
-    android:background="@drawable/bkgimg">
-        <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:id="@+id/toolbar"
+        android:background="@color/lightgreen"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="41dp"
             android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:id="@+id/toolbar"
-            android:background="@color/lightpurple"
-            android:gravity="center_vertical">
-
-            <ImageView
-                android:id="@+id/menu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/baseline_menu_24" />
-
-            <TextView
-                android:layout_width="41dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_weight="1"
-                android:text="Student Management System"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+            android:layout_marginStart="1dp"
+            android:layout_weight="1"
+            android:text="Student Management System"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
 
-        </LinearLayout>
+    </LinearLayout>
 
 
     <LinearLayout
@@ -70,7 +65,7 @@
                 android:layout_column="0"
                 android:layout_gravity="bottom"
                 android:layout_margin="8dp"
-               >
+                >
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -90,7 +85,7 @@
                         android:layout_height="wrap_content"
                         android:text="View Students"
                         android:textAlignment="center"
-                        android:textColor="@color/lavender"
+                        android:textColor="@color/logingreen"
                         android:textStyle="bold" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -124,7 +119,7 @@
                         android:layout_height="wrap_content"
                         android:text="Insert students"
                         android:textAlignment="center"
-                        android:textColor="@color/lavender"
+                        android:textColor="@color/logingreen"
                         android:textStyle="bold" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -157,7 +152,7 @@
                         android:layout_height="wrap_content"
                         android:text="Update Students"
                         android:textAlignment="center"
-                        android:textColor="@color/lavender"
+                        android:textColor="@color/logingreen"
                         android:textStyle="bold" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -190,133 +185,177 @@
                         android:layout_height="wrap_content"
                         android:text="Delete Students"
                         android:textAlignment="center"
-                        android:textColor="@color/lavender"
+                        android:textColor="@color/logingreen"
                         android:textStyle="bold" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
-
-
-
         </GridLayout>
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/frm1"
         android:layout_width="393dp"
-        android:layout_height="500dp"
+        android:layout_height="600dp"
         android:layout_gravity="bottom"
         android:layout_margin="8dp"
         app:cardCornerRadius="8dp"
-        app:cardBackgroundColor="@color/softblue"
+        app:cardBackgroundColor="@android:color/transparent"
         app:cardElevation="4dp"
         app:cardUseCompatPadding="true">
         <LinearLayout
             android:orientation="vertical"
-
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
             tools:context=".insertFragment">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="View User"
-                android:textSize="30sp"
-                android:textStyle="bold"/>
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="24dp">
 
-            <EditText
-                android:id="@+id/txtfullname"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:background="@drawable/round_back_dark_blue"
-                android:hint="username"
-                android:maxLines="1"
-                android:inputType="text"
-                android:textSize="16sp"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="40dp"/>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/viewuser"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginStart="20dp"
-                android:text="view"
-                android:textSize="20sp"
-                android:textAllCaps="false"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/back_primary"
-                android:textColor="@color/white"/>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/round_back_dark_blue">
-
-
-                <TableLayout
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:text="Enter student ID to view"
+                    android:id="@+id/viewtxt"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/green"/>
 
 
-                    <!-- Row 1 -->
-                    <TableRow>
-                        <TextView
-                            android:text="name"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="331dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:orientation="horizontal">
 
-                        <TextView
+                    <EditText
+                        android:id="@+id/searchid"
+                        android:layout_width="180dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/custom_edittext"
+                        android:drawablePadding="8dp"
+                        android:hint="Enter ID"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHighlight="@color/cardview_dark_background" />
 
-                            android:text="Email"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/btnsearch"
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="38dp"
+                        android:backgroundTint="@color/green"
+                        android:text="Search" />
+                </LinearLayout>
 
-                        <TextView
+                <TextView
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Student Details"
+                    android:textSize="17sp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/green"/>
 
-                            android:text="Age"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                    </TableRow>
-
-                    <!-- Row 2 -->
-                    <TableRow>
-                        <TextView
-                            android:id="@+id/tablename"
-                            android:text=""
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
-                        <TextView
-                            android:id="@+id/tableemail"
-                            android:text=""
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
-                        <TextView
-                            android:id="@+id/tableage"
-                            android:text=""
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                    </TableRow>
-
-                    <!-- Add more rows as needed -->
-                </TableLayout>
-            </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="370dp"
+                    android:layout_height="132dp"
+                    android:layout_below="@+id/updateCard"
+                    android:layout_gravity="center"
+                    >
 
 
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
 
+                        <!-- Header Row -->
+                        <TableRow android:background="@color/lightgreen">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text="Name"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text="Email"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text="DOB"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text="Phone"
+                                android:textSize="15sp" />
+                        </TableRow>
+
+                        <!-- Data Row -->
+                        <TableRow android:background="@color/tablegreen">
+                            <TextView
+                                android:id="@+id/tableStudentName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text=""
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tableStudentEmail"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text=""
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tableStudentDob"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text=""
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tableStudentPhone"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text=""
+                                android:textSize="15sp" />
+                        </TableRow>
+                    </TableLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
         </LinearLayout>
 
 

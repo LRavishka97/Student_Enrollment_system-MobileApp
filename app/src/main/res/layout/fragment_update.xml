@@ -1,91 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragmentUpdate"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter student ID to update"
+        android:id="@+id/logintxt"
+        android:layout_marginTop="30dp"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/green"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center"
-        tools:context=".fragmentUpdate"
-        android:background="@color/yellowsoft">
+        android:padding="24dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="Update User"
-            android:textSize="30sp"
-            android:textStyle="bold"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Enter details to update"
-            android:layout_marginTop="5dp"/>
+        <LinearLayout
+            android:layout_width="379dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:orientation="horizontal">
 
+            <EditText
+                android:id="@+id/id"
+                android:layout_width="220dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/custom_edittext"
+                android:drawablePadding="8dp"
+                android:hint="Enter ID"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/btnsearch"
+                android:layout_width="110dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="38dp"
+                android:backgroundTint="@color/green"
+                android:text="Search" />
+        </LinearLayout>
         <EditText
-            android:id="@+id/txtfullname"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:background="@drawable/round_back_dark_blue"
+            android:layout_height="50dp"
+            android:id="@+id/stdname"
+            android:background="@drawable/custom_edittext"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:drawablePadding="8dp"
             android:hint="Name"
-            android:maxLines="1"
-            android:inputType="text"
-            android:textSize="16sp"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/cardview_dark_background"
             android:layout_marginTop="40dp"/>
 
         <EditText
-            android:id="@+id/txtemail"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:background="@drawable/round_back_dark_blue"
-            android:hint="Email"
-            android:maxLines="1"
-            android:inputType="textEmailAddress"
-            android:textSize="16sp"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="20dp"/>
+            android:layout_height="50dp"
+            android:id="@+id/email"
+            android:background="@drawable/custom_edittext"
+            android:drawableLeft="@drawable/baseline_email_24"
+            android:drawablePadding="8dp"
+            android:hint="Enter Email"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/cardview_dark_background"
+            android:layout_marginTop="4dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/dob"
+            android:background="@drawable/custom_edittext"
+            android:drawableLeft="@drawable/baseline_calendar_month_24"
+            android:drawablePadding="8dp"
+            android:hint="Date of Birth (dd/mm/yyyy)"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            android:textColorHighlight="@color/cardview_dark_background"
+            android:layout_marginTop="4dp"/>
+
 
         <EditText
-            android:id="@+id/txtage"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:background="@drawable/round_back_dark_blue"
-            android:hint="age"
-            android:maxLines="1"
-            android:inputType="text"
-            android:textSize="16sp"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="20dp"/>
-
-
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/update"
+            android:layout_height="50dp"
+            android:id="@+id/mobile"
+            android:background="@drawable/custom_edittext"
+            android:drawableLeft="@drawable/baseline_phone_24"
+            android:drawablePadding="8dp"
+            android:hint="Enter Mobile"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            android:textColorHighlight="@color/cardview_dark_background"
+            android:layout_marginTop="4dp"/>
+        <Button
+            android:id="@+id/btnupdate"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginStart="20dp"
-            android:text="Update"
-            android:textSize="20sp"
-            android:textAllCaps="false"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/round_back_dark_blue"
-            android:textColor="@color/white"/>
-
-
-
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/green"
+            android:text="Update"/>
     </LinearLayout>
+
+</LinearLayout>

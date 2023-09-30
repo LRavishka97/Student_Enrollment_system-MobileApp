@@ -11,5 +11,8 @@
     <color name="yellowsoft">#DFD6A1</color>
     <color name="green"> #54A231</color>
     <color name="lightgreen"> #D5F0C3</color>
+    <color name="logingreen">#068365</color>
+    <color name="dashgreen">#7DC85B</color>
+    <color name="tablegreen">#EEF6EA</color>
 
 </resources>
